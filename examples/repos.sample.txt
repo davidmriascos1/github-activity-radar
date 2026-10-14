@@ -1,0 +1,17 @@
+# SAMPLE INPUT — not a target list.
+#
+# These are well-known open-source libraries, compilers and tooling, picked
+# because they are public, stable, and obviously not sales prospects. They
+# exist only so the pipeline has something to chew on:
+#
+#     python radar/run.py examples/repos.sample.txt
+#
+# Format: one GitHub URL per line. Blank lines and #-comments are ignored,
+# and a trailing "# ..." on a line is treated as an annotation.
+
+https://github.com/PaulRBerg/prb-math            # Solidity library — high contract %
+https://github.com/dapphub/ds-test               # Solidity test helper
+https://github.com/ethereum/solidity-examples    # Solidity examples
+https://github.com/vyperlang/vyper               # a compiler, written in Python — low contract %
+https://github.com/NomicFoundation/hardhat       # tooling, TypeScript — low contract %
+https://github.com/octocat/Hello-World           # control: no contract code at all

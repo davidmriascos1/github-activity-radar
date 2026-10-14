@@ -1,0 +1,9 @@
+repo_url,contract_pct,primary_lang,total_bytes,status
+https://github.com/example-org/vault-contracts,0.9412,Solidity,812345,ok
+https://github.com/demo-protocol/amm-v2,0.7730,Solidity,1503221,ok
+https://github.com/acme-labs/lending-core,0.5104,Solidity,640118,ok
+https://github.com/sample-dao/governance,0.3120,TypeScript,958770,ok
+https://github.com/sample-dao/token-bridge,0.0850,Rust,2210456,ok
+https://github.com/example-org/vault-frontend,0.0000,TypeScript,431002,ok
+https://github.com/acme-labs/docs,0.0000,,0,empty
+https://github.com/demo-protocol/sdk,,,,404

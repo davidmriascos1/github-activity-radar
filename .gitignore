@@ -1,0 +1,77 @@
+# ─────────────────────────────────────────────────────────────
+# RUNTIME DATA — private by default
+#
+# Everything the radar reads or writes at runtime lives under
+# /data (see radar/paths.py): repo lists, discovery exports,
+# the SQLite database, the contributor vault, the dashboard.
+# The whole directory is ignored. Only /examples holds data
+# that is meant to be committed, and all of it is synthetic.
+# ─────────────────────────────────────────────────────────────
+/data/*
+!/data/.gitkeep
+
+# Belt and braces: the same kinds of file, wherever they land.
+# (A scan output dropped next to the code must not be one
+# `git add .` away from being published.)
+out/
+*.db
+*.sqlite
+*.sqlite3
+dashboard.html
+run_history.csv
+bq-orgs-*.csv
+langgate_results*.csv
+repos.txt
+repos_*.txt
+passing_*.txt
+discovered_*.txt
+new_today*.txt
+widened_band_*.txt
+shared_contributors*.txt
+_testrepos/
+clones/
+
+# ...except the synthetic samples.
+!/examples/**
+
+# ─────────────────────────────────────────────────────────────
+# SECRETS — never commit these
+# ─────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+service-account*.json
+*-key.json
+*credentials*.json
+
+# ─────────────────────────────────────────────────────────────
+# Local notes, hand-offs and scratch copies
+# ─────────────────────────────────────────────────────────────
+.obsidian/
+HANDOFF*.md
+NOTES*.md
+*_backup.py
+*_backup.txt
+*.bak
+
+# ─────────────────────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# ─────────────────────────────────────────────────────────────
+# macOS / editors
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp

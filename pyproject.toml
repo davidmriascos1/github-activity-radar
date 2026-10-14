@@ -1,0 +1,25 @@
+[project]
+name = "github-radar"
+version = "2.3.0"
+description = "Reads public GitHub activity for early signs that a smart-contract team is about to buy a security audit."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "AGPL-3.0-only" }
+authors = [{ name = "David Riascos" }]
+
+# The current implementation (radar/) is standard library only.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+# Only for running the archived V1 under legacy/v1/.
+legacy = ["gspread", "google-auth", "requests", "duckdb"]
+
+# radar/ is a folder of scripts that import each other by bare name, not an
+# installable package. `pip install -e ".[dev]"` installs the extras only.
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["radar", "examples"]
